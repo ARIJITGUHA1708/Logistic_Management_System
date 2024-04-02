@@ -18,6 +18,7 @@ public class HomeController {
 	// website Start from this page which is home page
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePage() {
+		System.out.println("home page");
 		return "Home.html";
 	}
 
