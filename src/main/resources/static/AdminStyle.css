@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+html {
+  font-size: min(62.5%, 2vw);
+}
+
+main .light-rays > *::before, main .light-rays {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-corner at 50% 0%, #23617d 0%, #112031 100%);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+main .light-rays {
+  pointer-events: none;
+  filter: blur(0.6rem);
+}
+main .light-rays > * {
+  --deg: 0;
+  --length: 0rem;
+  --thickness: 20px;
+  --duration: 2s;
+  --delay: 1s;
+  --rotate: 0deg;
+  --degRange: 72.5deg;
+  --spreadRange: 40vw;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  width: var(--thickness);
+  height: calc(20% + 370px + var(--length));
+  left: 50%;
+  transform: translateX(calc(-50% + var(--deg) * var(--spreadRange) * -1 + 0.5 * var(--spreadRange))) translateY(-100px) rotateZ(calc(var(--degRange) * -0.5 + var(--deg) * var(--degRange))) rotateX(0.01deg);
+  transform-origin: center -100px;
+  mix-blend-mode: screen;
+  -webkit-animation: shimmer linear var(--duration) calc(var(--delay) * -1) infinite alternate forwards, rotate ease-in-out calc(var(--duration) * 3.14) calc(var(--delay) * -1) infinite alternate forwards;
+          animation: shimmer linear var(--duration) calc(var(--delay) * -1) infinite alternate forwards, rotate ease-in-out calc(var(--duration) * 3.14) calc(var(--delay) * -1) infinite alternate forwards;
+}
+main .light-rays > *::before {
+  content: "";
+  background: linear-gradient(to bottom, #a6fff8, rgba(166, 255, 248, 0) 100%);
+  transform-origin: top center;
+  transform: rotateX(40deg);
+}
+main .light-rays > *:nth-child(1) {
+  --deg: 0.5127631294;
+  --thickness: 16.3671875185px;
+  --length: 10.5475817876px;
+  --duration: 1.9617372322s;
+  --delay: 2.6177744423s;
+  --rotate: 0.8402410779deg;
+}
+main .light-rays > *:nth-child(2) {
+  --deg: 0.3606508331;
+  --thickness: 23.2232186635px;
+  --length: -0.5727324997px;
+  --duration: 2.4349149686s;
+  --delay: 2.3938211122s;
+  --rotate: -2.3684180826deg;
+}
+main .light-rays > *:nth-child(3) {
+  --deg: 0.9247716071;
+  --thickness: 21.655145295px;
+  --length: 25.6483038608px;
+  --duration: 1.0814029497s;
+  --delay: 2.5433703993s;
+  --rotate: -3.2386401942deg;
+}
+main .light-rays > *:nth-child(4) {
+  --deg: 0.4149173003;
+  --thickness: 27.7003369635px;
+  --length: -48.235062544px;
+  --duration: 1.1699470602s;
+  --delay: 2.0652730508s;
+  --rotate: 1.093247113deg;
+}
+main .light-rays > *:nth-child(5) {
+  --deg: 0.2238918225;
+  --thickness: 12.435447901px;
+  --length: 3.9879631618px;
+  --duration: 2.4919997523s;
+  --delay: 2.7456116427s;
+  --rotate: 2.7743793447deg;
+}
+main .light-rays > *:nth-child(6) {
+  --deg: 0.2978767195;
+  --thickness: 10.3569112708px;
+  --length: 45.7832775198px;
+  --duration: 1.4109528019s;
+  --delay: 2.5207575812s;
+  --rotate: -0.4537365957deg;
+}
+main .light-rays > *:nth-child(7) {
+  --deg: 0.1692822836;
+  --thickness: 23.2090174071px;
+  --length: 48.7553150521px;
+  --duration: 1.4486463332s;
+  --delay: 2.730127578s;
+  --rotate: -0.6386350471deg;
+}
+main .light-rays > *:nth-child(8) {
+  --deg: 0.0660131704;
+  --thickness: 13.9159140608px;
+  --length: -3.7668057267px;
+  --duration: 1.3944180118s;
+  --delay: 2.3832174945s;
+  --rotate: -0.6662680659deg;
+}
+main .light-rays > *:nth-child(9) {
+  --deg: 0.5739542658;
+  --thickness: 25.5277572424px;
+  --length: 9.485610118px;
+  --duration: 1.5494702596s;
+  --delay: 2.7475693798s;
+  --rotate: -1.457848832deg;
+}
+main .light-rays > *:nth-child(10) {
+  --deg: 0.3200497422;
+  --thickness: 13.939720266px;
+  --length: -28.75835458px;
+  --duration: 1.1384429529s;
+  --delay: 2.7175526127s;
+  --rotate: -0.2301541839deg;
+}
+main .light-rays > *:nth-child(11) {
+  --deg: 0.2619167606;
+  --thickness: 31.4591374054px;
+  --length: 11.7301491993px;
+  --duration: 2.1254271368s;
+  --delay: 2.699041s;
+  --rotate: 0.2820148314deg;
+}
+main .light-rays > *:nth-child(12) {
+  --deg: 0.4511042277;
+  --thickness: 19.5726804166px;
+  --length: -9.4939184732px;
+  --duration: 1.0065971776s;
+  --delay: 2.3897030378s;
+  --rotate: -1.5076511609deg;
+}
+main .light-rays > *:nth-child(13) {
+  --deg: 0.0677155348;
+  --thickness: 18.8865071857px;
+  --length: -15.890929978px;
+  --duration: 1.1722049944s;
+  --delay: 2.7266660855s;
+  --rotate: 2.138983142deg;
+}
+main .light-rays > *:nth-child(14) {
+  --deg: 0.4434943299;
+  --thickness: 18.2078540387px;
+  --length: 31.7422839013px;
+  --duration: 1.026663606s;
+  --delay: 2.8788662205s;
+  --rotate: -2.1734248474deg;
+}
+main .light-rays > *:nth-child(15) {
+  --deg: 0.3239190949;
+  --thickness: 19.4652553873px;
+  --length: 49.7290714297px;
+  --duration: 1.5938004705s;
+  --delay: 2.2232871816s;
+  --rotate: 3.6006857726deg;
+}
+main .light-rays > *:nth-child(16) {
+  --deg: 0.7980308967;
+  --thickness: 17.1020872178px;
+  --length: 32.944109326px;
+  --duration: 1.6607405514s;
+  --delay: 2.5576412875s;
+  --rotate: 0.1878103913deg;
+}
+main .light-rays > *:nth-child(17) {
+  --deg: 0.1437997194;
+  --thickness: 31.2061918534px;
+  --length: 35.42707088px;
+  --duration: 1.1294225144s;
+  --delay: 2.5209306823s;
+  --rotate: -3.6301597633deg;
+}
+main .light-rays > *:nth-child(18) {
+  --deg: 0.1733911033;
+  --thickness: 10.4535400005px;
+  --length: -43.3300835386px;
+  --duration: 2.3874101457s;
+  --delay: 2.0975499028s;
+  --rotate: 0.3895373057deg;
+}
+main .light-rays > *:nth-child(19) {
+  --deg: 0.7782971123;
+  --thickness: 15.9467747152px;
+  --length: 6.4610016319px;
+  --duration: 1.2059684379s;
+  --delay: 2.3656021274s;
+  --rotate: 0.9646872296deg;
+}
+main .light-rays > *:nth-child(20) {
+  --deg: 0.0722200431;
+  --thickness: 31.0298843833px;
+  --length: -33.3441513533px;
+  --duration: 1.3112853746s;
+  --delay: 2.8155238401s;
+  --rotate: 2.5836546097deg;
+}
+main .light-rays > *:nth-child(21) {
+  --deg: 0.137713916;
+  --thickness: 8.5902018466px;
+  --length: 21.894152393px;
+  --duration: 1.8095057401s;
+  --delay: 2.7811434222s;
+  --rotate: -0.3287179744deg;
+}
+main .light-rays > *:nth-child(22) {
+  --deg: 0.8184047223;
+  --thickness: 14.2054641185px;
+  --length: -42.1590331691px;
+  --duration: 2.2646331183s;
+  --delay: 2.0220603675s;
+  --rotate: 1.7558321147deg;
+}
+main .light-rays > *:nth-child(23) {
+  --deg: 0.4325552217;
+  --thickness: 22.2715993218px;
+  --length: -49.5864643159px;
+  --duration: 2.2698321938s;
+  --delay: 2.2709075943s;
+  --rotate: -2.8207886505deg;
+}
+main .light-rays > *:nth-child(24) {
+  --deg: 0.2857476113;
+  --thickness: 16.2816866515px;
+  --length: 36.716407728px;
+  --duration: 1.0247353885s;
+  --delay: 2.6266291708s;
+  --rotate: -1.393236193deg;
+}
+main .light-rays > *:nth-child(25) {
+  --deg: 0.7082544019;
+  --thickness: 14.8917693955px;
+  --length: 45.5342651393px;
+  --duration: 1.4132799407s;
+  --delay: 2.1001658047s;
+  --rotate: -2.0298248524deg;
+}
+main .light-rays > *:nth-child(26) {
+  --deg: 0.1623495355;
+  --thickness: 10.7689815467px;
+  --length: -14.1611646185px;
+  --duration: 1.6849584347s;
+  --delay: 2.3023995618s;
+  --rotate: 0.472560609deg;
+}
+main .light-rays > *:nth-child(27) {
+  --deg: 0.4843364769;
+  --thickness: 16.7925702472px;
+  --length: 47.6905803883px;
+  --duration: 2.4271586009s;
+  --delay: 2.7729307173s;
+  --rotate: -2.2392968606deg;
+}
+main .light-rays > *:nth-child(28) {
+  --deg: 0.8018319059;
+  --thickness: 28.875709041px;
+  --length: 9.9240016965px;
+  --duration: 1.8843058511s;
+  --delay: 2.9115308406s;
+  --rotate: 1.7874381785deg;
+}
+main .light-rays > *:nth-child(29) {
+  --deg: 0.8972586576;
+  --thickness: 16.0680540338px;
+  --length: 0.6239076775px;
+  --duration: 1.0980257753s;
+  --delay: 2.8703709021s;
+  --rotate: -1.995858616deg;
+}
+main .light-rays > *:nth-child(30) {
+  --deg: 0.9407818748;
+  --thickness: 15.1400662665px;
+  --length: -45.2540549107px;
+  --duration: 1.7837405463s;
+  --delay: 2.2655244815s;
+  --rotate: -3.3137399412deg;
+}
+main .light-rays > *:nth-child(31) {
+  --deg: 0.1557846356;
+  --thickness: 33.5457517371px;
+  --length: -47.9213851874px;
+  --duration: 1.9932442321s;
+  --delay: 2.1045511617s;
+  --rotate: -3.3711770498deg;
+}
+main .light-rays > *:nth-child(32) {
+  --deg: 0.7338146859;
+  --thickness: 17.6785916807px;
+  --length: -20.2956524453px;
+  --duration: 1.8599074679s;
+  --delay: 2.6842532688s;
+  --rotate: -0.9276548634deg;
+}
+main .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  margin-top: -17.5vh;
+  filter: drop-shadow(0px 3px 0px rgba(0, 0, 0, 0.2));
+}
+main .login h1 {
+  font-family: "Teko", "Nunito Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 0.3em;
+  background-image: linear-gradient(to bottom, white, #7ff);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 5.4rem;
+  opacity: 0.8;
+}
+main .login h1::before, main .login h1::after {
+  content: "";
+  display: block;
+  height: 0.1em;
+  flex: 1;
+  background-image: inherit;
+}
+main .login form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
+  grid-auto-flow: row dense;
+  padding: 3rem 4rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 1.4rem inset rgba(255, 255, 255, 0.1);
+  gap: 2rem;
+  color: white;
+}
+main .login form .group {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1/-1;
+  gap: 1rem;
+  align-items: center;
+}
+main .login form .group label {
+  font-size: 1.4rem;
+  text-align: right;
+  opacity: 0.7;
+}
+main .login form .group input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-radius: 0px;
+  font-size: inherit;
+  padding: 4px 6px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: inherit;
+  transition: all 0.2s;
+}
+main .login form .group input:focus {
+  background-color: rgba(112, 255, 255, 0.3);
+}
+main .login form button {
+  grid-column: 1/-1;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-size: inherit;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  outline: none;
+}
+main .login form button:hover, main .login form button:focus {
+  color: #7ff;
+  background-color: rgba(112, 255, 255, 0.3);
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    opacity: 0.33;
+  }
+  100% {
+    opacity: 0.03;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.33;
+  }
+  100% {
+    opacity: 0.03;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: var(--rotate);
+  }
+}
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: var(--rotate);
+  }
+}
