@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SKG : Team</title>
+</head>
+
+<body>
+	<main class="gallery">
+		<div class="gallery-card"><img src="Images/ARIJIT_GUHA.jpg" alt="arijit guha">
+			<h3>Arijit guha</h3>
+		</div>
+		<div class="gallery-card"><img src="Images/anurag.jpeg" alt="anurag kumar">
+			<h3>Anurag Kumar</h3>
+		</div>
+		<div class="gallery-card"><img src="Images/ARIJIT_GUHA.jpg" alt="arijit guha">
+			<h3>arijit guha</h3>
+		</div>
+		<div class="gallery-card"><img src="Images/pic.jpg" alt="arijit guha"></div>
+		<div class="gallery-card"><img src="Images/ARIJIT_GUHA.jpg" alt="arijit guha"></div>
+	</main>
+	<style>
+		body {
+			display: grid;
+			place-items: center;
+			height: 100vh;
+			background: linear-gradient(to right,
+					#6f7280,
+					#2a2c3c,
+					#181827,
+					#833ab4,
+					#fd1d1d,
+					#fcb045);
+			background-size: 400% 400%;
+			animation: body 10s infinite ease-in-out;
+		}
+
+		@keyframes body {
+			0% {
+				background-position: 0 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0 50%;
+			}
+		}
+
+		.gallery {
+			max-width: 720px;
+			height: 360px;
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		.gallery-card {
+			flex: 1;
+			border-radius: 0.75rem;
+			overflow: hidden;
+			cursor: pointer;
+			transition: flex 0.35s ease-in-out;
+			color: white;
+		}
+
+		.gallery-card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: 0.35s ease;
+		}
+
+		.gallery-card h3 {
+			position: absolute;
+			font-size: 24px;
+			bottom: 20px;
+			left: 20px;
+			margin: 0;
+			opacity: 0;
+		}
+
+		.gallery-card:hover {
+			flex: 2.25;
+		}
+
+		.gallery:has(.gallery-card:hover) .gallery-card:not(:hover) img {
+			filter: grayscale(100%);
+			opacity: 0.5;
+		}
+	</style>
+</body>
+
+</html>

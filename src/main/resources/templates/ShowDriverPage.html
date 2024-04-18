@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SKG : SHOW DRIVERS</title>
+</head>
+
+<body style="text-align: center; background-color: bisque;">
+	<table style="text-align: center;align-items: center;width: 100%; border: 1px solid;">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>DLNumber</th>
+				<th>DLIssueDate</th>
+				<th>DLValidity</th>
+				<th>Date Of Borth</th>
+				<th>Address</th>
+				<th>Blood Group</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:if="${list.empty}">
+				<td> No Drivers</td>
+			</tr>
+			<tr th:each="l:${list}">
+				<td th:text="${l.id}"></td>
+				<td th:text="${l.name}"></td>
+				<td th:text="${l.dlNumber}"></td>
+				<td th:text="${l.dlIssueDate}"></td>
+				<td th:text="${l.dlValidity}"></td>
+				<td th:text="${l.dob}"></td>
+				<td th:text="${l.address}"></td>
+				<td th:text="${l.bloodGroup}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<style>
+		body {
+			margin: 0;
+			display: grid;
+			place-items: center;
+			height: 100svh;
+			height: 100vh;
+			background: linear-gradient(to right,
+					#6f7280,
+					#2a2c3c,
+					#181827,
+					#833ab4,
+					rgb(239, 92, 44),
+					#fcb045);
+			background-size: 400% 400%;
+			animation: body 10s infinite ease-in-out;
+		}
+
+		@keyframes body {
+			0% {
+				background-position: 0 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0 50%;
+			}
+		}
+	</style>
+</body>
+
+</html>

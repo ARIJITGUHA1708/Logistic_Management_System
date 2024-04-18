@@ -1,32 +1,44 @@
-<!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="ISO-8859-1">
-	<title>SKG : NEW USER</title>
+	<title>SKG : ADD VEHICLE</title>
 </head>
-
 <body>
 	<div class="wrapper">
-		<form action="/newuser" method="post">
-			<h1>NEW USER</h1>
+		<form action="/addvehicle" method="post">
+			<h1>ADD VEHICLE DETAILS</h1>
 			<div class="input">
-				<input type="text" name="name" placeholder="Full Name" maxlength="30" required>
+				<input type="text" name="companyName" placeholder="Company Name">
 			</div>
 			<div class="input">
-				<input type="text" name="email" placeholder="Email Address" maxlength="40" required>
+				<input type="text" name="registrationNumber" placeholder="Registration Number">
 			</div>
 			<div class="input">
-				<input type="text" name="mobile" placeholder="Mobile Number" maxlength="10" required>
+				<input type="text" name="registrationValidity" placeholder="Registration Validity">
 			</div>
 			<div class="input">
-				<input type="text" name="address" placeholder="Address" maxlength="60" required>
+				<input type="text" name="registrationDate" placeholder="Registration Date">
 			</div>
 			<div class="input">
-				<input type="text" name="username" placeholder="Username" maxlength="35" required>
+				<input type="text" name="manufacturingDate" placeholder="Manufacturing Date">
 			</div>
 			<div class="input">
-				<input type="password" name="password" placeholder="Password" maxlength="20" required>
+				<input type="text" name="fuelType" placeholder="Fuel Type">
+			</div>
+			<div class="input">
+				<input type="text" name="chassisNumber" placeholder="Chassis Number">
+			</div>
+			<div class="input">
+				<input type="text" name="loadCapacity" placeholder="Load Capacity">
+			</div>
+			<div class="input">
+				<input type="text" name="engineNumber" placeholder="Engine Number">
+			</div>
+			<div class="input">
+				<input type="text" name="ownerName" placeholder="Owner Name">
+			</div>
+			<div class="input">
+				<input type="text" name="cubicCapacity" placeholder="Cubic Capacity">
 			</div>
 			<button type="submit" class="btn">Submit</button>
 		</form>
@@ -122,5 +134,4 @@
 		}
 	</style>
 </body>
-
 </html>

@@ -1,32 +1,32 @@
-<!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="ISO-8859-1">
-	<title>SKG : NEW USER</title>
+	<title>SKG : ADD DRIVER</title>
 </head>
-
 <body>
 	<div class="wrapper">
-		<form action="/newuser" method="post">
-			<h1>NEW USER</h1>
+		<form action="/adddriver" method="post">
+			<h1>ADD DRIVER DETAILS</h1>
 			<div class="input">
-				<input type="text" name="name" placeholder="Full Name" maxlength="30" required>
+				<input type="text" name="name" placeholder="Driver Name">
 			</div>
 			<div class="input">
-				<input type="text" name="email" placeholder="Email Address" maxlength="40" required>
+				<input type="text" name="dlNumber" placeholder="Driving Licence Number">
 			</div>
 			<div class="input">
-				<input type="text" name="mobile" placeholder="Mobile Number" maxlength="10" required>
+				<input type="text" name="dlIssueDate" placeholder="Driving Licence Issue Date">
 			</div>
 			<div class="input">
-				<input type="text" name="address" placeholder="Address" maxlength="60" required>
+				<input type="text" name="dlValidity" placeholder="Driving Licence Validity">
 			</div>
 			<div class="input">
-				<input type="text" name="username" placeholder="Username" maxlength="35" required>
+				<input type="text" name="dob" placeholder="Date of Birth">
 			</div>
 			<div class="input">
-				<input type="password" name="password" placeholder="Password" maxlength="20" required>
+				<input type="text" name="address" placeholder="Address">
+			</div>
+			<div class="input">
+				<input type="text" name="bloodGroup" placeholder="Blood Group">
 			</div>
 			<button type="submit" class="btn">Submit</button>
 		</form>
@@ -122,5 +122,4 @@
 		}
 	</style>
 </body>
-
 </html>
