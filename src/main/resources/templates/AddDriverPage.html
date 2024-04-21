@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SKG : ADD DRIVER</title>
+	<link rel="stylesheet" href="/SideMenu.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<input type="checkbox" id="btn" hidden>
+		<label for="btn" class="menu-btn">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times"></i>
+		</label>
+		<nav id="sidebar">
+			<div class="title">Admin</div>
+			<ul class="list-items">
+				<li><a href="/home">Home</a></li>
+				<li><a href="/fetchContactUsMessage">Messages</a></li>
+				<li><a href="/addvehicle">Add Vehicle</a></li>
+				<li><a href="/showvehicles">Show Vehicles</a></li>
+				<li><a href="/adddriver">Add Driver</a></li>
+				<li><a href="/showdrivers">Show Drivers</a></li>
+				<li><a href="#">Track Consignment</a></li>
+				<li><a href="/getnewuserhomepage">Add User</a></li>
+				<li><a href="#">Update User</a></li>
+				<li><a href="#">Delete User</a></li>
+				<div class="icons">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</ul>
+		</nav>
+	</div>
+	<div class="content">
+		<div class="wrapper1">
+		<form action="/adddriver" method="post">
+			<h1>ADD DRIVER DETAILS</h1>
+			<div class="input">
+				<input type="text" name="name" placeholder="Driver Name">
+			</div>
+			<div class="input">
+				<input type="text" name="dlNumber" placeholder="Driving Licence Number">
+			</div>
+			<div class="input">
+				<input type="text" name="dlIssueDate" placeholder="Driving Licence Issue Date">
+			</div>
+			<div class="input">
+				<input type="text" name="dlValidity" placeholder="Driving Licence Validity">
+			</div>
+			<div class="input">
+				<input type="text" name="dob" placeholder="Date of Birth">
+			</div>
+			<div class="input">
+				<input type="text" name="address" placeholder="Address">
+			</div>
+			<div class="input">
+				<input type="text" name="bloodGroup" placeholder="Blood Group">
+			</div>
+			<button type="submit" class="btn">Submit</button>
+		</form>
+	</div>
+	</div>
+
+
+	<style>
+		
+		/*-----------------------------------------------------*/
+		.wrapper1 {
+			width: 420px;
+			background-color: transparent;
+			border: 2px solid rgba(255, 255, 255, 02);
+			border-radius: 10px;
+			margin:auto;
+			padding: 30px 40px;
+			color: #fff;
+		}
+
+		input {
+			margin: 5px;
+			width: 100%;
+			height: 50px;
+			background: none;
+			outline: none;
+			border: 2px solid;
+			border-radius: 40px;
+			padding: 20px 45px 20px 20px;
+			font-size: 16px;
+			color: #fff;
+		}
+
+		.btn {
+			margin-top: 5px;
+			width: 100%;
+			height: 50px;
+			background-color: #fff;
+			outline: none;
+			border: solid #fff;
+			border-radius: 40px;
+			font-size: 16px;
+			color: #000;
+
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		p {
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		::placeholder {
+			color: #fff
+		}
+	</style>
+</body>
+
+</html>

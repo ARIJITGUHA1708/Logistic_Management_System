@@ -1,0 +1,147 @@
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>
+		SKG : Team Members
+	</title>
+
+</head>
+
+<body>
+	
+	<section>
+	<div class="card-wrapper">
+		<div class="card">
+			<div class="card-front">
+				<img src="Images/pic.jpg" alt="arijit guha">
+			</div>
+			<div class="card-back">
+				<h3>Arijit Guha</h3>
+				<p>Java Developer</p>
+				<br>
+				<p>
+					A MCA student of RVS college of engineering and technology. Live in Jamshedpur
+				</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-front">
+				<img src="Images/anurag2.jpeg" alt="anurag kumar">
+			</div>
+			<div class="card-back">
+				<h3>Anurag Kumar</h3>
+				<p>Marketing</p>
+				<br>
+				<p>
+					A MCA Student of RVS college of Engineering and technology. Live in Jamshedpur
+				</p>
+				<p>
+					Employee of Infosys
+				</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-front">
+				<img src="Images/anurag2.jpeg" alt="jaskaran singh">
+			</div>
+			<div class="card-back">
+				<h3>Jaskaran Singh</h3>
+				<p>Finance</p>
+				<br>
+				<p>
+					A MCA Student of RVS college of Engineering and technology. Live in Jmashedpur
+				</p>
+			</div>
+		</div>
+	</div>
+	</section>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			display: grid;
+			place-items: center;
+			height: 100svh;
+			font-family: system-ui;
+			background-image: url(https://image.tmdb.org/t/p/original/lzWHmYdfeFiMIY4JaMmtR7GEli3.jpg);
+			background-size: cover;
+			background-position: center;
+
+			&::after {
+				position: fixed;
+				inset: 0;
+				background-color: #000000cc !important;
+				z-index: 1;
+				backdrop-filter: blur(10px);
+				content: "";
+			}
+		}
+
+		.card-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem !important;
+		}
+
+		.card {
+			width: 256px;
+			place-items: center;
+			z-index: 2;
+			aspect-ratio: 50/75;
+			isolation: isolate;
+			position: relative;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+
+			&:hover {
+				&>.card-front {
+					transform: rotateY(180deg);
+				}
+
+				&>.card-back {
+					transform: rotateY(0deg);
+					opacity: 1;
+				}
+			}
+		}
+
+		.card-front,
+		.card-back {
+			aspect-ratio: inherit;
+			transition: inherit;
+			width: 100%;
+			border-radius: 0.75rem;
+			inset: 0;
+			position: absolute;
+			overflow: hidden;
+			transform-style: preserve-3d;
+			transition: transform 0.8s ease;
+		}
+
+		.card-front {
+			z-index: 2;
+
+			&>img {
+				max-width: 100%;
+			}
+		}
+
+		.card-back {
+			background-color: #000000cc;
+			backface-visibility: hidden;
+			padding: 1.5rem;
+			z-index: 2;
+			transform: rotateY(-180deg);
+			backdrop-filter: blur(4px);
+			color: white;
+		}
+	</style>
+</body>
+
+</html>
+</ht>

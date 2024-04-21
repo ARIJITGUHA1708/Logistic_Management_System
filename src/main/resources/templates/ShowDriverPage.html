@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SKG : SHOW DRIVERS</title>
+</head>
+
+<body style="text-align: center;">
+	<div class="wrapper">
+		<input type="checkbox" id="btn" hidden>
+		<label for="btn" class="menu-btn">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times"></i>
+		</label>
+		<nav id="sidebar">
+			<div class="title">Admin</div>
+			<ul class="list-items">
+				<li><a href="/home">Home</a></li>
+				<li><a href="/fetchContactUsMessage">Messages</a></li>
+				<li><a href="/addvehicle">Add Vehicle</a></li>
+				<li><a href="/showvehicles">Show Vehicles</a></li>
+				<li><a href="/adddriver">Add Driver</a></li>
+				<li><a href="/showdrivers">Show Drivers</a></li>
+				<li><a href="#">Track Consignment</a></li>
+				<li><a href="/getnewuserhomepage">Add User</a></li>
+				<li><a href="#">Update User</a></li>
+				<li><a href="#">Delete User</a></li>
+				<div class="icons">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</ul>
+		</nav>
+	</div>
+	<div class="content">
+		<table style="text-align: center;align-items: center;width: 50%; border: 3px solid;">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>DLNumber</th>
+				<th>DLIssueDate</th>
+				<th>DLValidity</th>
+				<th>Date Of Borth</th>
+				<th>Address</th>
+				<th>Blood Group</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:if="${list.empty}">
+				<td> No Drivers</td>
+			</tr>
+			<tr th:each="l:${list}">
+				<td th:text="${l.id}"></td>
+				<td th:text="${l.name}"></td>
+				<td th:text="${l.dlNumber}"></td>
+				<td th:text="${l.dlIssueDate}"></td>
+				<td th:text="${l.dlValidity}"></td>
+				<td th:text="${l.dob}"></td>
+				<td th:text="${l.address}"></td>
+				<td th:text="${l.bloodGroup}"></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		body {
+			background: #964734;
+		}
+
+		.wrapper {
+			height: 100%;
+			width: 300px;
+			position: relative;
+		}
+
+		.wrapper .menu-btn {
+			position: absolute;
+			left: 20px;
+			top: 10px;
+			background: #024950;
+			color: #fff;
+			height: 45px;
+			width: 45px;
+			z-index: 9999;
+			border: 1px solid #0a4147;
+			border-radius: 5px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+		}
+
+		#btn:checked~.menu-btn {
+			left: 247px;
+		}
+
+		.wrapper .menu-btn i {
+			position: absolute;
+			transform: translate(-50%);
+			font-size: 23px;
+			transition: all 0.3s ease;
+		}
+
+		.wrapper .menu-btn i.fa-times {
+			opacity: 0;
+		}
+
+		#btn:checked~.menu-btn i.fa-times {
+			opacity: 1;
+			transform: rotate(-180deg);
+		}
+
+		#btn:checked~.menu-btn i.fa-bars {
+			opacity: 0;
+			transform: rotate(180deg);
+		}
+
+		#sidebar {
+			position: fixed;
+			background: #404040;
+			height: 100%;
+			width: 270px;
+			overflow: hidden;
+			left: -270px;
+			transition: all 0.3s ease;
+		}
+
+		#btn:checked~#sidebar {
+			left: 0;
+		}
+
+		#sidebar .title {
+			line-height: 65px;
+			text-align: center;
+			background: #003135;
+			font-size: 25px;
+			font-weight: 600;
+			color: #f2f2f2;
+			border-bottom: 1px solid #222;
+		}
+
+		#sidebar .list-items {
+			position: relative;
+			background: #024950;
+			width: 100%;
+			height: 100%;
+			list-style: none;
+		}
+
+		#sidebar .list-items li {
+			padding-left: 40px;
+			line-height: 50px;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			border-bottom: 1px solid #333;
+			transition: all 0.3s ease;
+		}
+
+		#sidebar .list-items li:hover {
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
+			box-shadow: 0 0px 10px 3px #222;
+		}
+
+		#sidebar .list-items li:first-child {
+			border-top: none;
+		}
+
+		#sidebar .list-items li a {
+			color: #f2f2f2;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: 500;
+			height: 100%;
+			width: 100%;
+			display: block;
+		}
+
+		#sidebar .list-items li a i {
+			margin-right: 20px;
+		}
+
+		#sidebar .list-items .icons {
+			width: 100%;
+			height: 40px;
+			text-align: center;
+			position: absolute;
+			bottom: 100px;
+			line-height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#sidebar .list-items .icons a {
+			height: 100%;
+			width: 40px;
+			display: block;
+			margin: 0 5px;
+			font-size: 18px;
+			color: #f2f2f2;
+			background: #095b63;
+			border-radius: 5px;
+			border: 1px solid #09484f;
+			transition: all 0.3s ease;
+		}
+
+		#sidebar .list-items .icons a:hover {
+			background: #124045;
+		}
+
+		.list-items .icons a:first-child {
+			margin-left: 0px;
+		}
+
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			z-index: -1;
+			width: 100%;
+			text-align: center;
+		}
+		/*body {
+			margin: 0;
+			display: grid;
+			place-items: center;
+			height: 100svh;
+			height: 100vh;
+			background: linear-gradient(to right,
+					#6f7280,
+					#2a2c3c,
+					#181827,
+					#833ab4,
+					rgb(239, 92, 44),
+					#fcb045);
+			background-size: 400% 400%;
+			animation: body 10s infinite ease-in-out;
+		}
+
+		@keyframes body {
+			0% {
+				background-position: 0 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0 50%;
+			}
+		}*/
+	</style>
+</body>
+
+</html>
