@@ -25,7 +25,7 @@ public class HomeController {
 	// Get the admin login page
 	@RequestMapping(value = "/adminloginpage")
 	public String adminLoginPage() {
-		return "AdminLoginPage.html";
+		return "AdminLogin.html";
 	}
 
 	// check the admin username and password and through admin home page
@@ -40,7 +40,7 @@ public class HomeController {
 			return "AdminDashboard.html";
 		} else {
 			{
-				return "AdminLoginPage.html";
+				return "AdminLogin.html";
 			}
 		}
 	}
