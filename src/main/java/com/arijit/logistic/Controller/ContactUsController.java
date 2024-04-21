@@ -24,7 +24,7 @@ public class ContactUsController {
 	@RequestMapping(value = "/SendContactUsPageInformation", method = RequestMethod.POST)
 	public String contactusdata(ContactUsModel contactUsModel) {
 		contactUsService.addAllData(contactUsModel);
-		return "Home.html";
+		return "startingPage.html";
 	}
 	@RequestMapping(value="/fetchContactUsMessage",method = RequestMethod.GET)
 	public ModelAndView contactUsMessage()

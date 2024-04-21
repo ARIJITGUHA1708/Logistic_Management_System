@@ -1,10 +1,43 @@
+<!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="ISO-8859-1">
 	<title>SKG : ADD DRIVER</title>
+	<link rel="stylesheet" href="/SideMenu.css">
 </head>
+
 <body>
 	<div class="wrapper">
+		<input type="checkbox" id="btn" hidden>
+		<label for="btn" class="menu-btn">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times"></i>
+		</label>
+		<nav id="sidebar">
+			<div class="title">Admin</div>
+			<ul class="list-items">
+				<li><a href="/home">Home</a></li>
+				<li><a href="/fetchContactUsMessage">Messages</a></li>
+				<li><a href="/addvehicle">Add Vehicle</a></li>
+				<li><a href="/showvehicles">Show Vehicles</a></li>
+				<li><a href="/adddriver">Add Driver</a></li>
+				<li><a href="/showdrivers">Show Drivers</a></li>
+				<li><a href="#">Track Consignment</a></li>
+				<li><a href="/getnewuserhomepage">Add User</a></li>
+				<li><a href="#">Update User</a></li>
+				<li><a href="#">Delete User</a></li>
+				<div class="icons">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+			</ul>
+		</nav>
+	</div>
+	<div class="content">
+		<div class="wrapper1">
 		<form action="/adddriver" method="post">
 			<h1>ADD DRIVER DETAILS</h1>
 			<div class="input">
@@ -31,52 +64,18 @@
 			<button type="submit" class="btn">Submit</button>
 		</form>
 	</div>
+	</div>
+
+
 	<style>
-		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Poppins", sans-serif;
-		}
-
-		body {
-			margin: 0;
-			display: grid;
-			place-items: center;
-			height: 100svh;
-			height: 100vh;
-			background: linear-gradient(to right,
-					#6f7280,
-					#2a2c3c,
-					#181827,
-					#833ab4,
-					#fd1d1d,
-					#fcb045);
-			background-size: 400% 400%;
-			animation: body 10s infinite ease-in-out;
-		}
-
-		@keyframes body {
-			0% {
-				background-position: 0 50%;
-			}
-
-			50% {
-				background-position: 100% 50%;
-			}
-
-			100% {
-				background-position: 0 50%;
-			}
-		}
-
-		.wrapper {
+		
+		/*-----------------------------------------------------*/
+		.wrapper1 {
 			width: 420px;
 			background-color: transparent;
 			border: 2px solid rgba(255, 255, 255, 02);
 			border-radius: 10px;
+			margin:auto;
 			padding: 30px 40px;
 			color: #fff;
 		}
@@ -122,4 +121,5 @@
 		}
 	</style>
 </body>
+
 </html>

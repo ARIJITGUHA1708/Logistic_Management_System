@@ -5,10 +5,12 @@
 	<title>
 		SKG : Team Members
 	</title>
+
 </head>
 
 <body>
 	
+	<section>
 	<div class="card-wrapper">
 		<div class="card">
 			<div class="card-front">
@@ -53,6 +55,7 @@
 			</div>
 		</div>
 	</div>
+	</section>
 	<style>
 		* {
 			margin: 0;
@@ -72,7 +75,7 @@
 			&::after {
 				position: fixed;
 				inset: 0;
-				background-color: #000000cc;
+				background-color: #000000cc !important;
 				z-index: 1;
 				backdrop-filter: blur(10px);
 				content: "";
@@ -82,7 +85,7 @@
 		.card-wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 3rem;
+			gap: 3rem !important;
 		}
 
 		.card {

@@ -18,7 +18,8 @@ public class HomeController {
 	// website Start from this page which is home page
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePage() {
-		return "Home.html";
+		//return "Home.html";
+		return "startingPage.html";
 	}
 
 	// Get the admin login page
@@ -35,7 +36,8 @@ public class HomeController {
 		if ((username.equals("arijitguha1708@gmail.com") && password.equals("arijit"))
 				|| (username.equals("anurag@gmail.com") && password.equals("anurag"))
 				|| (username.equals("jaskaran@gmail.com") && password.equals("jaskaran"))) {
-			return "AdminHomePage.html";
+			//return "AdminHomePage.html";
+			return "AdminDashboard.html";
 		} else {
 			{
 				return "AdminLoginPage.html";
